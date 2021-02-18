@@ -43,7 +43,7 @@ export default function Phone() {
 			(person, index) => index != people.length - 1
 		);
 		// Give React some time to rerender DOM to update className of CSSTransition. Otherwise, card won't be swiped correct direction.
-		// The reason why I reset swipeDirection is that if setSwipeDirection is changed left to right, then React will rerender the TinderCards component which means it will be unmounted. Therefore, withought resetting swipeDirection will trigger exit animations when swipeDirection is not same in a row.
+		// The reason why I reset swipeDirection is that if swipeDirection function is changed left to right in above setSwipeDirection(), then React will rerender the TinderCards component which means the component will be unmounted. Therefore, it will trigger exit animations. If you set swipeDirection to anything except left and right will prevent it to be happened because there is no such a className animation in TinderCards.css.
 		setTimeout(() => {
 			setPeople(newPeople);
 			setSwipeDirection('');
