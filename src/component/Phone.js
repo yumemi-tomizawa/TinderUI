@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import TinderCards from './TinderCards';
 
 export default function Phone() {
 	// This data will be passed to <TinderCards> Component.
@@ -31,8 +32,7 @@ export default function Phone() {
 
 	return (
 		<div className='phone'>
-			📱📱📱📱📱📱📱📱📱📱📱
-			{/* Tinder Cards Component */}
+			<TinderCards people={people} />
 			{/* Button Component */}
 		</div>
 	);
