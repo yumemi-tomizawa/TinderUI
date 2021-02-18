@@ -45,7 +45,7 @@ Tinder のカード UI のような UI を React で実装してください。
 
 ユーザーが Skip と Like のボタンを交互に押した時、アニメーションが上手くいかなかった。
 
-![tinderUI-error](./img/tinderUI-error.mov)
+![tinderUI-error](./img/tinderUI-error.gif)
 
 ### 考えられる問題
 
@@ -76,4 +76,4 @@ useEffect()のおかげで Skip と Like ボタンを交互に押した時、set
 
 なので毎回、カードを取り除いた後、このように setSwipeDirection('')を実行し、swipeDirection をリセットする。　そうすることでまた state が変わり rerender が実行され<CSSTransition>の className は' 'になる。当然''という名前のアニメショーンは書いていない。結果、left->right と変更した時、同じように<Transition Group>の exit animation がトリガーされるが、<CSSTransition>の className は''のためアニメーションは実行されずに済むので上手くいく。
 
-![tinderUI-error](./img/tinderUI-success.mov)
+![tinderUI-sucess](./img/tinderUI-success.gif)
