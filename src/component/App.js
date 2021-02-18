@@ -1,5 +1,7 @@
-function App() {
-	return <div>First Commit 🏄🏼‍♂️</div>;
-}
+import Phone from './Phone';
+import '../css/app.css';
 
+function App() {
+	return <Phone />;
+}
 export default App;
