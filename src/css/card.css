@@ -1,0 +1,23 @@
+.card__swipe {
+	position: absolute;
+}
+
+.card {
+	position: relative;
+	width: 250px;
+	height: 300px;
+	max-width: 85vw;
+	padding: 20px;
+	background-size: cover;
+	background-position: center;
+	border-radius: 30px;
+}
+
+.card__name {
+	position: absolute;
+	bottom: 10px;
+	left: 30px;
+	color: #f4f4f4;
+	opacity: 0.9;
+	font-size: 1.5rem;
+}
