@@ -35,8 +35,6 @@ export default function Phone() {
 
 	function handleDelete(direction) {
 		// If direction is not same, update swipe direction and rerender DOM then className of CSSTransition in TinderCards.js will be updated so that card will be swiped based on user input.
-		// if (direction !== swipeDirection) {
-		// }
 		setSwipeDirection(direction);
 		// Remove the top of card.
 		const newPeople = people.filter(
