@@ -42,3 +42,38 @@ Tinder のカード UI のような UI を React で実装してください。
 - [react-tinder-card](https://www.npmjs.com/package/react-tinder-card) - Swipe 機能
 
 ## 難しかったこと
+
+ユーザーが Skip と Like のボタンを交互に押した時、アニメーションが上手くいかなかった。
+
+![tinderUI-error](./img/tinderUI-error.mov)
+
+### 考えられる問題
+
+もしかしたどこか知らないところで、コンポーネントが unmount されて、<Transition Group>の exit animation がトリガーされてしまっているかもしれない。
+
+### 解決するためにしたこと
+
+useEffect()を使い, いつ TinderCards コンポーネントが mount、unmount されるかをテストしてみた。
+
+```javascript
+useEffect(() => {
+	console.log('Mounted');
+	return () => {
+		console.log('Unmounted');
+	};
+});
+```
+
+### 問題の解決
+
+useEffect()のおかげで Skip と Like ボタンを交互に押した時、setSwipeDirection()で swipeDirection の state が変わり、React が TinderCards コンポーネントを rerender をしているのがわかった。要は、以下の状況が起きていた。
+
+1. 左のボタンを押した後、右のボタンを押す。
+
+2. setSwipeDirection()が left->right へと state を変更されるので React が TinderCards コンポーネントを rerender する。
+
+3. 元々あった TinderCards が unmount されるため<Transition Group>の exit animation がトリガーされる。この時、<CSSTransition>の className は left のままのため、左側に流れるアニメーションが実行されてしまう。
+
+なので毎回、カードを取り除いた後、このように setSwipeDirection('')を実行し、swipeDirection をリセットする。　そうすることでまた state が変わり rerender が実行され<CSSTransition>の className は' 'になる。当然''という名前のアニメショーンは書いていない。結果、left->right と変更した時、同じように<Transition Group>の exit animation がトリガーされるが、<CSSTransition>の className は''のためアニメーションは実行されずに済むので上手くいく。
+
+![tinderUI-error](./img/tinderUI-success.mov)
