@@ -2,6 +2,8 @@ import React from 'react';
 import { v4 as uuidv4 } from 'uuid';
 import Card from './Card';
 import { TransitionGroup, CSSTransition } from 'react-transition-group';
+// This is for swiping card
+import TinderCard from 'react-tinder-card';
 
 export default function TinderCards({ people, swipeDirection }) {
 	return (
@@ -13,7 +15,13 @@ export default function TinderCards({ people, swipeDirection }) {
 						timeout={500}
 						classNames={swipeDirection}
 					>
-						<Card {...person} />
+						<TinderCard
+							className='tinderCards__swipe'
+							key={uuidv4()}
+							preventSwipe={['up', 'down']}
+						>
+							<Card {...person} />
+						</TinderCard>
 					</CSSTransition>
 				))}
 			</TransitionGroup>
