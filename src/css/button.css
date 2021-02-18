@@ -1,0 +1,21 @@
+.button {
+	position: absolute;
+	bottom: 30px;
+	left: 0;
+	display: flex;
+	justify-content: space-around;
+	width: 100%;
+}
+
+.button .MuiIconButton-root {
+	background-color: white;
+	box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.18) !important;
+}
+
+.button__dislike {
+	color: #fe3c72 !important;
+}
+
+.button__like {
+	color: #63dc99 !important;
+}
