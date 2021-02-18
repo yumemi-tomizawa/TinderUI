@@ -2,3 +2,21 @@
 	display: flex;
 	justify-content: center;
 }
+
+.right-exit {
+	transform: scale(0.8) rotateZ(0deg);
+}
+
+.right-exit-active {
+	transform: scale(1.1) translate(500px, -150px) rotateZ(20deg);
+	transition: all 500ms ease-out;
+}
+
+.left-exit {
+	transform: scale(0.8) rotateZ(0deg);
+}
+
+.left-exit-active {
+	transform: scale(1.1) translate(-500px, -150px) rotateZ(-20deg);
+	transition: all 500ms ease-out;
+}

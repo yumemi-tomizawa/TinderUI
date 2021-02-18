@@ -3,6 +3,8 @@ import TinderCards from './TinderCards';
 import Button from './Button';
 
 export default function Phone() {
+	// This keeps track of swipe direction.
+	const [swipeDirection, setSwipeDirection] = useState('');
 	// This data will be passed to <TinderCards> Component.
 	const [people, setPeople] = useState([
 		{
@@ -31,10 +33,27 @@ export default function Phone() {
 		},
 	]);
 
+	function handleDelete(direction) {
+		// If direction is not same, update swipe direction and rerender DOM then className of CSSTransition in TinderCards.js will be updated so that card will be swiped based on user input.
+		// if (direction !== swipeDirection) {
+		// }
+		setSwipeDirection(direction);
+		// Remove the top of card.
+		const newPeople = people.filter(
+			(person, index) => index != people.length - 1
+		);
+		// Give React some time to rerender DOM to update className of CSSTransition. Otherwise, card won't be swiped correct direction.
+		// The reason why I reset swipeDirection is that if setSwipeDirection is changed left to right, then React will rerender the TinderCards component which means it will be unmounted. Therefore, withought resetting swipeDirection will trigger exit animations when swipeDirection is not same in a row.
+		setTimeout(() => {
+			setPeople(newPeople);
+			setSwipeDirection('');
+		}, 500);
+	}
+
 	return (
 		<div className='phone'>
-			<TinderCards people={people} />
-			<Button />
+			<TinderCards swipeDirection={swipeDirection} people={people} />
+			<Button handleDelete={handleDelete} />
 		</div>
 	);
 }
