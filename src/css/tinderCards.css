@@ -1,3 +1,12 @@
+.tinderCards__empty {
+	transform: rotate(-20deg);
+	font-size: 3rem;
+	text-transform: uppercase;
+	border: 10px solid red;
+	padding: 8px;
+	margin-top: 120px;
+}
+
 .tinderCards__container {
 	display: flex;
 	justify-content: center;

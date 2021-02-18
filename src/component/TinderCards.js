@@ -8,6 +8,7 @@ import TinderCard from 'react-tinder-card';
 export default function TinderCards({ people, swipeDirection }) {
 	return (
 		<div className='tinderCards__container'>
+			<h1 className='tinderCards__empty'>Empty</h1>
 			<TransitionGroup component={null}>
 				{people.map((person) => (
 					<CSSTransition
