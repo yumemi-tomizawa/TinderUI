@@ -1,70 +1,44 @@
-# Getting Started with Create React App
+# Tinder UI (技術テスト)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+- Web フロントエンドエンジニアインターン by Eureka, Inc.
 
-## Available Scripts
+## Requirements
 
-In the project directory, you can run:
+Tinder のカード UI のような UI を React で実装してください。
 
-### `npm start`
+- スマホのブラウザ環境で動作すること
+- カード数は任意とする
+  カードにはユーザーの画像、ニックネーム、年齢を表示する（画像、データは任意）
+- カード下の左にスキップボタン、右にいいね！ボタンを表示する
+- スキップボタンをタップしたときはカードが左に流れるアニメーションが実行され、次のカードが表示される
+- いいね！ボタンをタップしたときはカードが右に流れるアニメーションが実行され、次のカードが表示される
+- すべてのカードを仕分けできたら empty 画面が表示される
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Advanced Requirements
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+- テストを書く
+- スワイプでカードを仕分けできる
+- カードの下部をタップすると詳細画面が表示される
+- API サーバーと連携する
 
-### `npm test`
+## Planning
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+① UI design
 
-### `npm run build`
+![Tinder-UI-Picture](./img/tinder-ui.png)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+[figma で見てみる](https://www.figma.com/file/CviNRhuLA4WSgGwaXELWEZ/Untitled?node-id=0%3A1)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+② Component
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- Phone (写真とボタンを覆うコンポーネント)
+- TinderCards (一枚一枚の写真を展開(map)するコンポーネント）
+- Card (写真のコンポーネント)
+- Botton (ボタンのコンポーネント)
 
-### `npm run eject`
+③ 使用予定の Library
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+- [Material-UI](https://material-ui.com/) - Button の Icon
+- [react-tinder-card](https://www.npmjs.com/package/react-tinder-card) - Swipe 機能
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## 難しかったこと
