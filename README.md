@@ -2,6 +2,14 @@
 
 - Web フロントエンドエンジニアインターン by Eureka, Inc.
 
+## Try the demo
+
+![tinderUI-error](./img/tinderUI-demo.gif)
+
+Try the demo [here!](https://tommytommychopper.github.io/TinderUI/)
+
+まだ全ての Advanced Requirements は満たしていませんが、一応、最低限の Requiremnts は満たすことができたので、デプロイしてみました。
+
 ## Requirements
 
 Tinder のカード UI のような UI を React で実装してください。
