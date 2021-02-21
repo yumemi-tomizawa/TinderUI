@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/TinderUI/precache-manifest.9db6776f356ff4d813173520842fb984.js"
+  "/TinderUI/precache-manifest.586f77f98bc161b8d1b1ec1c8e2d811d.js"
 );
 
 workbox.clientsClaim();

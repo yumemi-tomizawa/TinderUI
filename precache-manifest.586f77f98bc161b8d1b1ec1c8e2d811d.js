@@ -1,11 +1,11 @@
 self.__precacheManifest = [
   {
-    "revision": "1f9c5294190cfc95c0e3",
-    "url": "/TinderUI/static/css/main.1ed2687c.chunk.css"
+    "revision": "876f84db1d9831fff792",
+    "url": "/TinderUI/static/css/main.1af0e909.chunk.css"
   },
   {
-    "revision": "1f9c5294190cfc95c0e3",
-    "url": "/TinderUI/static/js/main.1f9c5294.chunk.js"
+    "revision": "876f84db1d9831fff792",
+    "url": "/TinderUI/static/js/main.876f84db.chunk.js"
   },
   {
     "revision": "7cd49296196840daea4e",
@@ -16,7 +16,7 @@ self.__precacheManifest = [
     "url": "/TinderUI/static/js/runtime~main.1fd74593.js"
   },
   {
-    "revision": "bb60a97e23659b7496205ad0b9f835ce",
+    "revision": "edc4a148981ee4feea22eb4a887210ed",
     "url": "/TinderUI/index.html"
   }
 ];

@@ -1,13 +1,13 @@
 {
-  "main.css": "/TinderUI/static/css/main.1ed2687c.chunk.css",
-  "main.js": "/TinderUI/static/js/main.1f9c5294.chunk.js",
-  "main.js.map": "/TinderUI/static/js/main.1f9c5294.chunk.js.map",
+  "main.css": "/TinderUI/static/css/main.1af0e909.chunk.css",
+  "main.js": "/TinderUI/static/js/main.876f84db.chunk.js",
+  "main.js.map": "/TinderUI/static/js/main.876f84db.chunk.js.map",
   "static/js/1.7cd49296.chunk.js": "/TinderUI/static/js/1.7cd49296.chunk.js",
   "static/js/1.7cd49296.chunk.js.map": "/TinderUI/static/js/1.7cd49296.chunk.js.map",
   "runtime~main.js": "/TinderUI/static/js/runtime~main.1fd74593.js",
   "runtime~main.js.map": "/TinderUI/static/js/runtime~main.1fd74593.js.map",
-  "static/css/main.1ed2687c.chunk.css.map": "/TinderUI/static/css/main.1ed2687c.chunk.css.map",
+  "static/css/main.1af0e909.chunk.css.map": "/TinderUI/static/css/main.1af0e909.chunk.css.map",
   "index.html": "/TinderUI/index.html",
-  "precache-manifest.9db6776f356ff4d813173520842fb984.js": "/TinderUI/precache-manifest.9db6776f356ff4d813173520842fb984.js",
+  "precache-manifest.586f77f98bc161b8d1b1ec1c8e2d811d.js": "/TinderUI/precache-manifest.586f77f98bc161b8d1b1ec1c8e2d811d.js",
   "service-worker.js": "/TinderUI/service-worker.js"
 }
