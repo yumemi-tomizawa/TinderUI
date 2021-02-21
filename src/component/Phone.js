@@ -40,7 +40,7 @@ export default function Phone() {
 			setSwipeDirection(direction);
 			// Remove the top of card.
 			const newPeople = people.filter(
-				(person, index) => index != people.length - 1
+				(person, index) => index !== people.length - 1
 			);
 			// Give React some time to rerender DOM to update className of CSSTransition. Otherwise, card won't be swiped correct direction.
 			// The reason why I reset swipeDirection is that if swipeDirection function is changed left to right in above setSwipeDirection(), then React will rerender the TinderCards component which means the component will be unmounted. Therefore, it will trigger exit animations. If you set swipeDirection to anything except left and right will prevent it to be happened because there is no such a className animation in TinderCards.css.
@@ -64,20 +64,36 @@ const profiles = [
 		nickname: 'Sara',
 		age: 18,
 		url: '',
+		detail: {
+			job: 'software engineer👩‍💻',
+			favorite: ['Banana🍌', 'Soccor⚽'],
+		},
 	},
 	{
 		nickname: 'Yui',
 		age: 29,
 		url: '',
+		detail: {
+			job: 'doctor 👩‍⚕ ️',
+			favorite: ['Watermelon 🍉', 'Basketball 🏀'],
+		},
 	},
 	{
 		nickname: 'Vennesa',
 		age: 20,
 		url: '',
+		detail: {
+			job: 'Investor 💰',
+			favorite: ['Avocado 🥑', 'Surfing 🏄‍♀️'],
+		},
 	},
 	{
 		nickname: 'Karen',
 		age: 24,
 		url: '',
+		detail: {
+			job: 'Model 👡',
+			favorite: ['Grapes 🍇', 'Climbing‍ 🧗‍️️'],
+		},
 	},
 ];

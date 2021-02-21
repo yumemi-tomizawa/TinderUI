@@ -32,4 +32,5 @@
 
 .tinderCards__swipe {
 	position: absolute;
+	z-index: 6;
 }

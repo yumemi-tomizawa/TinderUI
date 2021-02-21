@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import React, { useEffect } from 'react';
 import Phone from './Phone';
 import '../css/app.css';
 
