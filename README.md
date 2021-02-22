@@ -83,3 +83,13 @@ useEffect()のおかげで Skip と Like ボタンを交互に押した時、set
 なので毎回、カードを取り除いた後、このように setSwipeDirection('')を実行し、swipeDirection をリセットする。　そうすることでまた state が変わり rerender が実行され<CSSTransition>の className は' 'になる。当然''という名前のアニメショーンは書いていない。結果、left->right と変更した時、同じように<Transition Group>の exit animation がトリガーされるが、<CSSTransition>の className は''のためアニメーションは実行されずに済むので上手くいく。
 
 ![tinderUI-sucess](./img/tinderUI-success.gif)
+
+## もし機会があればお伺いしたいこと
+
+React アプリケーション内でアニメーションが必要となった時、何を使い実装していることが多いいのか。例えば、今回の TinderUI アプリーケーションで自分が使用した、３つのアニメーション。
+
+1. ボタンをタップした時に一枚のカードがアンマウントされ左右どちらかに流れる。
+2. スワイプでカードを仕分けできる。
+3. カードの下部をタップするとカードがフリップされ詳細画面が表示される。
+
+これら三つを組み合わせなければいけなかったとき、どのように実装しているのか物凄く気になる
